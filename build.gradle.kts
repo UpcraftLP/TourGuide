@@ -14,8 +14,8 @@ plugins {
 	alias(libs.plugins.ksp.plugin)
 }
 
-group = "template"
-version = "1.0-SNAPSHOT"
+group = "dev.upcraft.tourguide"
+version = System.getenv("VERSION") ?: "1.0.0-SNAPSHOT"
 
 dependencies {
 	detektPlugins(libs.detekt)
@@ -54,12 +54,12 @@ kordEx {
 		// See https://docs.kordex.dev/data-collection.html
 		dataCollection(DataCollection.Standard)
 
-		mainClass = "template.AppKt"
+		mainClass = "dev.upcraft.tourguide.AppKt"
 	}
 
 	i18n {
-		classPackage = "template.i18n"
-		translationBundle = "template.strings"
+		classPackage = "dev.upcraft.tourguide.i18n"
+		translationBundle = "tourguide.strings"
 	}
 }
 
