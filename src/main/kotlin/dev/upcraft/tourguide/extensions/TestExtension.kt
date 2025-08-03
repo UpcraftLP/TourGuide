@@ -12,7 +12,7 @@ import dev.kordex.core.extensions.publicSlashCommand
 import dev.kordex.core.i18n.withContext
 import dev.kordex.core.utils.respond
 import dev.upcraft.tourguide.TEST_SERVER_ID
-import template.i18n.Translations
+import dev.upcraft.tourguide.i18n.Translations
 
 class TestExtension : Extension() {
 	override val name = "test"
