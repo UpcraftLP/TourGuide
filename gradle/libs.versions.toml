@@ -28,6 +28,5 @@ detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 
-kordex-docker = { id = "dev.kordex.gradle.docker", version.ref = "kordex-gradle" }
 kordex-plugin = { id = "dev.kordex.gradle.kordex", version.ref = "kordex-gradle" }
 ksp-plugin = { id = "com.google.devtools.ksp", version.ref = "ksp" }
