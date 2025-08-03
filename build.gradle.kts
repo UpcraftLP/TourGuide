@@ -10,7 +10,6 @@ plugins {
 	alias(libs.plugins.detekt)
 
 	alias(libs.plugins.kordex.plugin)
-	alias(libs.plugins.ksp.plugin)
 }
 
 group = "dev.upcraft.tourguide"
