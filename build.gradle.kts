@@ -12,6 +12,8 @@ plugins {
 	alias(libs.plugins.kordex.plugin)
 }
 
+val javaVersion = 21
+
 group = "dev.upcraft.tourguide"
 version = System.getenv("VERSION") ?: "1.0.0-SNAPSHOT"
 
@@ -65,6 +67,25 @@ detekt {
 	buildUponDefaultConfig = true
 
 	config.from(rootProject.files("detekt.yml"))
+}
+kotlin {
+	jvmToolchain {
+		languageVersion.set(JavaLanguageVersion.of(javaVersion))
+	}
+}
+
+tasks.withType<Jar> {
+	manifest {
+		attributes["Implementation-Title"] = project.name
+		attributes["Specification-Version"] = project.version
+
+		System.getenv("COMMIT_SHA_SHORT")?.let { sha ->
+			attributes["Implementation-Version"] = sha
+		}
+	}
+}
+tasks.assemble {
+	dependsOn(tasks["installDist"])
 }
 
 // IDEA no longer automatically downloads sources/javadoc jars for dependencies, so we need to explicitly enable the behavior.
