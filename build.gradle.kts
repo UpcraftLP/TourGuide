@@ -51,7 +51,7 @@ kordEx {
 
 	bot {
 		// See https://docs.kordex.dev/data-collection.html
-		dataCollection(DataCollection.Standard)
+		dataCollection(DataCollection.Minimal)
 
 		mainClass = "dev.upcraft.tourguide.AppKt"
 	}
